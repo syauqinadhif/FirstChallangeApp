@@ -95,7 +95,7 @@ struct PersistenceController {
 
 
     /// Function untuk menyimpan transaksi baru ke Core Data
-    func saveTransaction(amount: Double, date: Date, category: String, isExpense: Bool) {
+    func saveTransaction(amount: Int64, date: Date, category: String, isExpense: Bool) {
         let context = viewContext
         let newTransaction = FinancialTransaction(context: context)
         newTransaction.id = UUID()

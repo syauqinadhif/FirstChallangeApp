@@ -51,7 +51,7 @@ class TransactionViewModel: ObservableObject {
         let transactionsForLast7Days = persistenceController.getTransactionsForLast7Days()
         var tempTransactions: [TransactionItem] = []
 
-        // Sort dates from newest to oldest
+        // Urutkan tanggal dari yang terbaru (hari ini) ke yang lama
         let sortedDates = transactionsForLast7Days.keys.sorted(by: { $0 > $1 })
 
         for date in sortedDates {
@@ -63,29 +63,21 @@ class TransactionViewModel: ObservableObject {
                 let totalAmount = income > 0 ? (income - expense) : expense
                 let color: Color = (income > 0 && totalAmount >= 0) ? .green : .red
 
-                // Combine transactions with the same category
+                // Gabungkan transaksi dengan kategori yang sama
                 var combinedDetails: [String: TransactionDetail] = [:]
                 for transaction in transactions {
                     if let existingDetail = combinedDetails[transaction.category ?? "Unknown"] {
-                        // Extract numeric value from existingDetail.amount (e.g., "Rp 1000" -> 1000)
-                        let existingAmountString = existingDetail.amount.replacingOccurrences(of: "Rp ", with: "")
-                        let existingAmount = Int(existingAmountString) ?? 0
-                        
-                        // Add the existing amount to the new transaction amount
-                        let newAmount = existingAmount + Int(transaction.amount)
-                        
-                        // Update the combinedDetails dictionary with the new amount
+                        let newAmount = (Int(existingDetail.amount.replacingOccurrences(of: "Rp ", with: "")) ?? 0) + Int(transaction.amount)
                         combinedDetails[transaction.category ?? "Unknown"] = TransactionDetail(
                             icon: existingDetail.icon,
                             category: existingDetail.category,
                             amount: "Rp \(newAmount)"
                         )
                     } else {
-                        // If the category doesn't exist in combinedDetails, add it
                         combinedDetails[transaction.category ?? "Unknown"] = TransactionDetail(
                             icon: "creditcard",
                             category: transaction.category ?? "Unknown",
-                            amount: "Rp \(Int(transaction.amount))"
+                            amount: "Rp \(transaction.amount)"
                         )
                     }
                 }
