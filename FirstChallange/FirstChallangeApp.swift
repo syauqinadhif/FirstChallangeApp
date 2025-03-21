@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FirstChallangeApp: App {
+    let persistenceController = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
+                .environment(\.managedObjectContext, persistenceController.viewContext)
         }
     }
 }

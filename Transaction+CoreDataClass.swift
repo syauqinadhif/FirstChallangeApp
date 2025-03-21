@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@objc(Transaction)
-public class Transaction: NSManagedObject {
-
+@objc(FinancialTransaction)
+public class FinancialTransaction: NSManagedObject {
 }

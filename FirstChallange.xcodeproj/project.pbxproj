@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		08E467C72D8B6064002DA372 /* FinancialTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E467C62D8B6064002DA372 /* FinancialTransaction+CoreDataProperties.swift */; };
+		08E467C82D8B6064002DA372 /* FinancialTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E467C52D8B6064002DA372 /* FinancialTransaction+CoreDataClass.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		087D29A62D7F2F3B00D7A4A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		087D29952D7F2F3A00D7A4A6 /* FirstChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		087D29A52D7F2F3B00D7A4A6 /* FirstChallangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstChallangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		087D29AF2D7F2F3B00D7A4A6 /* FirstChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08E467C52D8B6064002DA372 /* FinancialTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinancialTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		08E467C62D8B6064002DA372 /* FinancialTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinancialTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +82,8 @@
 		087D298C2D7F2F3A00D7A4A6 = {
 			isa = PBXGroup;
 			children = (
+				08E467C52D8B6064002DA372 /* FinancialTransaction+CoreDataClass.swift */,
+				08E467C62D8B6064002DA372 /* FinancialTransaction+CoreDataProperties.swift */,
 				087D29972D7F2F3A00D7A4A6 /* FirstChallange */,
 				087D29A82D7F2F3B00D7A4A6 /* FirstChallangeTests */,
 				087D29B22D7F2F3B00D7A4A6 /* FirstChallangeUITests */,
@@ -195,6 +204,8 @@
 			);
 			mainGroup = 087D298C2D7F2F3A00D7A4A6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 087D29962D7F2F3A00D7A4A6 /* Products */;
 			projectDirPath = "";
@@ -236,6 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E467C72D8B6064002DA372 /* FinancialTransaction+CoreDataProperties.swift in Sources */,
+				08E467C82D8B6064002DA372 /* FinancialTransaction+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FirstChallange/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LZD7JZ8ZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -408,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.FirstChallange;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.messacc.HelloApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -424,6 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FirstChallange/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LZD7JZ8ZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.FirstChallange;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.messacc.HelloApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
